@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
   <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -12,30 +12,42 @@
   <!-- Dark background -->
   <rect width="256" height="256" rx="60" fill="#0a0e27"/>
   
-  <!-- Neon Brain -->
-  <g filter="url(#glow)">
-    <!-- Left hemisphere -->
-    <path d="M 80 80 Q 70 100 70 128 Q 70 160 90 180" stroke="#00ff88" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M 85 90 Q 75 105 75 128 Q 75 155 92 172" stroke="#00ff88" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- Neon Brain Outline -->
+  <g filter="url(#neonGlow)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left hemisphere outline -->
+    <path d="M 78 100 Q 65 115 65 130 Q 65 165 85 185" 
+          stroke="#00ff88" stroke-width="2.5" fill="none"/>
     
-    <!-- Right hemisphere -->
-    <path d="M 176 80 Q 186 100 186 128 Q 186 160 166 180" stroke="#00ff88" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M 171 90 Q 181 105 181 128 Q 181 155 164 172" stroke="#00ff88" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <!-- Right hemisphere outline -->
+    <path d="M 178 100 Q 191 115 191 130 Q 191 165 171 185" 
+          stroke="#00ff88" stroke-width="2.5" fill="none"/>
+    
+    <!-- Top connection -->
+    <path d="M 100 70 Q 128 60 156 70" 
+          stroke="#00ffff" stroke-width="2" fill="none"/>
+    
+    <!-- Left cerebral lobe details -->
+    <path d="M 75 105 Q 68 115 70 130" 
+          stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <path d="M 82 95 Q 75 108 78 125" 
+          stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.7"/>
+    
+    <!-- Right cerebral lobe details -->
+    <path d="M 181 105 Q 188 115 186 130" 
+          stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <path d="M 174 95 Q 181 108 178 125" 
+          stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.7"/>
+    
+    <!-- Corpus callosum center -->
+    <path d="M 110 120 Q 128 115 146 120" 
+          stroke="#00ffff" stroke-width="1.5" fill="none" opacity="0.6"/>
     
     <!-- Brain stem -->
-    <path d="M 128 180 Q 125 200 128 220" stroke="#00ffff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 128 185 L 128 210" 
+          stroke="#00ff88" stroke-width="2" fill="none"/>
     
-    <!-- Cerebral ridges -->
-    <path d="M 100 110 Q 110 105 120 110" stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.8"/>
-    <path d="M 136 110 Q 146 105 156 110" stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.8"/>
-    <path d="M 105 135 Q 115 130 125 135" stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.8"/>
-    <path d="M 131 135 Q 141 130 151 135" stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.8"/>
-    <path d="M 110 160 Q 120 155 130 160" stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.8"/>
-    <path d="M 126 160 Q 136 155 146 160" stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.8"/>
-    
-    <!-- Center detail -->
-    <circle cx="128" cy="128" r="20" stroke="#00ffff" stroke-width="2" opacity="0.8"/>
-    <circle cx="128" cy="128" r="12" fill="none" stroke="#ff00ff" stroke-width="1.5" opacity="0.6"/>
-    <circle cx="128" cy="128" r="8" fill="#00ff88" opacity="0.4"/>
+    <!-- Center circle (neural core) -->
+    <circle cx="128" cy="128" r="18" 
+            stroke="#00ffff" stroke-width="1.5" fill="none" opacity="0.5"/>
   </g>
 </svg>
