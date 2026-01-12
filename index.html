@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Solutions for Local Businesses | Sequim, WA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #faf9f7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 24px 0;
+            background: #faf9f7;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e8e5df;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #2f7c6e;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header-cta {
+            background: #2f7c6e;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: #246655;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            padding: 100px 0 120px;
+            text-align: center;
+            background: #faf9f7;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 28px;
+            color: #1a202c;
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            text-wrap: balance;
+        }
+
+        .subheadline {
+            font-size: 1.35rem;
+            color: #718096;
+            margin-bottom: 48px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            text-wrap: pretty;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2f7c6e;
+            color: white;
+            padding: 18px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(47, 124, 110, 0.2);
+        }
+
+        .cta-button:hover {
+            background: #246655;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(47, 124, 110, 0.3);
+        }
+
+        .cta-secondary {
+            background: white;
+            color: #2d3748;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .cta-secondary:hover {
+            background: #f7fafc;
+            border-color: #cbd5e0;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1a202c;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: -0.02em;
+            text-wrap: balance;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-wrap: pretty;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .audience-card {
+            padding: 32px;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e8e5df;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .audience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            border-color: #2f7c6e;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: #e6f4f1;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .audience-card h3 {
+            font-size: 1.25rem;
+            color: #1a202c;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .audience-card p {
+            color: #718096;
+            line-height: 1.6;
+            text-wrap: pretty;
+        }
+
+        .what-i-do {
+            background: white;
+            border-top: 1px solid #e8e5df;
+            border-bottom: 1px solid #e8e5df;
+        }
+
+        .what-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .what-content p {
+            font-size: 1.2rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-wrap: pretty;
+        }
+
+        .what-content .highlight {
+            font-weight: 700;
+            color: #2f7c6e;
+            font-size: 1.3rem;
+            margin-top: 32px;
+        }
+
+        .use-cases {
+            background: #faf9f7;
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 28px;
+            margin-top: 50px;
+        }
+
+        .use-case {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #e8e5df;
+            transition: all 0.3s;
+        }
+
+        .use-case:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .use-case strong {
+            color: #2f7c6e;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .use-case p {
+            color: #718096;
+            line-height: 1.7;
+            text-wrap: pretty;
+        }
+
+        .local-section {
+            background: #e6f4f1;
+            border-top: 1px solid #2f7c6e20;
+        }
+
+        .local-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 50px;
+        }
+
+        .local-feature {
+            text-align: center;
+            padding: 32px;
+            background: white;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .local-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(47, 124, 110, 0.15);
+        }
+
+        .local-feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .local-feature h3 {
+            color: #2f7c6e;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .local-feature p {
+            color: #4a5568;
+            line-height: 1.6;
+            text-wrap: pretty;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #2f7c6e 0%, #246655 100%);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            text-wrap: pretty;
+        }
+
+        .cta-section .cta-button {
+            background: white;
+            color: #2f7c6e;
+            margin-top: 20px;
+        }
+
+        .cta-section .cta-button:hover {
+            background: #f7fafc;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            padding: 48px 0;
+            text-align: center;
+            background: #faf9f7;
+            border-top: 1px solid #e8e5df;
+            color: #718096;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .subheadline {
+                font-size: 1.15rem;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .audience-grid,
+            .use-case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">✨</div>
+                    <span>Sequim AI</span>
+                </div>
+                <a href="#contact" class="header-cta">Book a Free Walkthrough</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>AI that actually helps your business—built and explained in plain English</h1>
+            <p class="subheadline">I help small businesses and individuals in Sequim save time, reduce costs, and build useful tools with AI. No jargon. No hype. Just practical solutions that work.</p>
+            <div class="cta-group">
+                <a href="#contact" class="cta-button">Book a Free AI Walkthrough →</a>
+                <a href="#examples" class="cta-button cta-secondary">See What's Possible</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Who This Is For</h2>
+            <p class="section-subtitle">You don't need to be technical. You just need to be curious.</p>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="card-icon">💼</div>
+                    <h3>Small Businesses</h3>
+                    <p>Save hours on customer questions, scheduling, and repetitive admin work.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="card-icon">🏨</div>
+                    <h3>Property & Hospitality</h3>
+                    <p>Automate guest inquiries, property info, and booking support around the clock.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Educators</h3>
+                    <p>Save time on lesson planning, feedback, and resource creation.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Students</h3>
+                    <p>Learn, research, and organize information more effectively.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Content Creators</h3>
+                    <p>Produce more videos, images, and writing without burning out.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="card-icon">🤔</div>
+                    <h3>AI Curious</h3>
+                    <p>You keep hearing about AI but have no idea where to begin (and feel a little behind).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="what-i-do">
+        <div class="container">
+            <h2>What I Actually Do</h2>
+            <div class="what-content">
+                <p>I don't teach theory or run workshops. <strong>I build things.</strong></p>
+                <p>Together, we'll talk about what's taking up your time or what you wish worked better. Then I'll create a custom solution—whether that's a chatbot that knows your business inside and out, a tool that generates images or videos for your marketing, or an automation that handles repetitive work for you.</p>
+                <p class="highlight">You'll see it working. We'll test it together.<br>And I'll help you start using it right away.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="use-cases" id="examples">
+        <div class="container">
+            <h2>Examples of Real Uses</h2>
+            <p class="section-subtitle">Here's what AI can do when it's set up for your actual needs</p>
+            
+            <div class="use-case-grid">
+                <div class="use-case">
+                    <strong>Answer customer questions instantly</strong>
+                    <p>A chatbot trained on your services, pricing, and policies—available 24/7 on your website.</p>
+                </div>
+
+                <div class="use-case">
+                    <strong>Turn documents into a searchable assistant</strong>
+                    <p>Upload manuals, guides, textbooks, or research papers and get instant answers without digging through files.</p>
+                </div>
+
+                <div class="use-case">
+                    <strong>Create images, videos, and marketing assets</strong>
+                    <p>Generate visuals for social media, YouTube thumbnails, lesson materials, or presentations in minutes instead of hours.</p>
+                </div>
+
+                <div class="use-case">
+                    <strong>Speed up writing and editing</strong>
+                    <p>Draft blog posts, scripts, lesson plans, or study guides—then refine them to sound like you.</p>
+                </div>
+
+                <div class="use-case">
+                    <strong>Organize and analyze information</strong>
+                    <p>Summarize articles, extract key points from lectures, or turn messy notes into structured outlines.</p>
+                </div>
+
+                <div class="use-case">
+                    <strong>Automate repetitive tasks</strong>
+                    <p>From sorting emails to updating spreadsheets to generating quiz questions, let AI handle the boring stuff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="local-section">
+        <div class="container">
+            <h2>Why Local Matters</h2>
+            <div class="local-features">
+                <div class="local-feature">
+                    <div class="local-feature-icon">📍</div>
+                    <h3>Based in Sequim, WA</h3>
+                    <p>I'm here if you want to meet in person, and I understand the businesses and people in this area.</p>
+                </div>
+                <div class="local-feature">
+                    <div class="local-feature-icon">💻</div>
+                    <h3>Remote Available</h3>
+                    <p>I also work remotely with clients across the region, so distance isn't a barrier.</p>
+                </div>
+                <div class="local-feature">
+                    <div class="local-feature-icon">🗣️</div>
+                    <h3>Plain Language</h3>
+                    <p>No jargon, no pressure, no pretending AI is magic. Just clear conversations about what's possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Let's Talk</h2>
+            <p>Not sure if AI is right for your situation? Let's find out together.</p>
+            <p>Book a free, no-pressure conversation. We'll talk about what you're working on, what's frustrating, and whether there's a practical way AI can help. If there is, I'll show you. If there isn't, I'll tell you that too.</p>
+            <a href="mailto:chetmcknight@gmail.com" class="cta-button">Schedule a Free Intro Call</a>
+            <p style="margin-top: 24px; font-size: 1rem; opacity: 0.9;">No sales pitch. Just an honest conversation about what might actually be useful.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Contact:</strong> chetmcknight@gmail.com | 206-696-3456 | Based in Sequim, WA</p>
+        </div>
+    </footer>
+</body>
+</html>
