@@ -117,7 +117,7 @@ header {
 
 h1 {
     font-size: 3.5rem;
-    margin-bottom: 28px;
+    margin-bottom: 16px;
     color: #2f7c6e;
     line-height: 1.15;
     font-weight: 800;
@@ -132,7 +132,7 @@ h1 {
 .subheadline {
     font-size: 1.35rem;
     color: #888888;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
@@ -229,7 +229,7 @@ h2 {
 }
 
 .audience-section {
-    background: linear-gradient(135deg, #e6f4f1 0%, #d9f0ed 100%);
+    background: linear-gradient(135deg, #d4f0eb 0%, #bfe8e3 100%);
 }
 
 .audience-grid {
@@ -355,7 +355,7 @@ h2 {
 }
 
 .use-cases {
-    background: linear-gradient(135deg, #f9f8f6 0%, #f0ede9 100%);
+    background: linear-gradient(135deg, #f0ede9 0%, #e5dfd8 100%);
     position: relative;
 }
 
