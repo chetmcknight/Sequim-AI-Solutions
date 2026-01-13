@@ -132,16 +132,17 @@ h1 {
 }
 
 .cta-secondary {
-    background: #a68c5f;
+    background: #ff7f00;
     color: white;
-    border: 2px solid #a68c5f;
-    box-shadow: 0 2px 8px rgba(166, 140, 95, 0.15);
+    border: 2px solid #ff7f00;
+    box-shadow: 0 2px 12px rgba(255, 127, 0, 0.4);
 }
 
 .cta-secondary:hover {
-    background: #8f7850;
-    border-color: #8f7850;
+    background: #ff6600;
+    border-color: #ff6600;
     transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 127, 0, 0.5);
 }
 
 section {
@@ -184,7 +185,7 @@ h2 {
     padding: 32px;
     background: white;
     border-radius: 16px;
-    border: 1px solid #e8e5df;
+    border: 2px solid #e8e5df;
     transition: all 0.3s;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
@@ -192,7 +193,7 @@ h2 {
 .audience-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-    border-color: #2f7c6e;
+    border: 2px solid #2f7c6e;
 }
 
 .card-icon {
@@ -262,13 +263,14 @@ h2 {
     background: white;
     padding: 32px;
     border-radius: 16px;
-    border: 1px solid #e8e5df;
+    border: 2px solid #e8e5df;
     transition: all 0.3s;
 }
 
 .use-case:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border: 2px solid #ff7f00;
 }
 
 .use-case strong {
@@ -303,11 +305,13 @@ h2 {
     background: white;
     border-radius: 16px;
     transition: all 0.3s;
+    border: 2px solid #e8e5df;
 }
 
 .local-feature:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(47, 124, 110, 0.15);
+    border: 2px solid #2f7c6e;
 }
 
 .local-feature-icon {
