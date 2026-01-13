@@ -498,8 +498,10 @@ h2 {
 .local-feature-icon {
     font-size: 48px;
     margin-bottom: 16px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-out;
     display: inline-block;
+    transform-origin: center center;
+    will-change: transform;
 }
 
 .local-feature h3 {
