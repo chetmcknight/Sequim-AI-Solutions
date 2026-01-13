@@ -79,7 +79,7 @@ header {
 .hero {
     padding: 100px 0 120px;
     text-align: center;
-    background: linear-gradient(135deg, #faf9f7 0%, #e8f4f1 100%);
+    background: #ffffff;
     position: relative;
     overflow: hidden;
 }
