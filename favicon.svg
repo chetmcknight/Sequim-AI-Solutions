@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
     <filter id="neonGlow">
       <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -9,45 +9,40 @@
     </filter>
   </defs>
   
-  <!-- Dark background -->
-  <rect width="256" height="256" rx="60" fill="#0a0e27"/>
-  
-  <!-- Neon Brain Outline -->
-  <g filter="url(#neonGlow)" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Left hemisphere outline -->
-    <path d="M 78 100 Q 65 115 65 130 Q 65 165 85 185" 
-          stroke="#00ff88" stroke-width="2.5" fill="none"/>
+  <!-- Neon Light Bulb Brain -->
+  <g filter="url(#neonGlow)" stroke="#00ff88" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2">
+    <!-- Light rays -->
+    <line x1="50" y1="5" x2="50" y2="12"/>
+    <line x1="50" y1="88" x2="50" y2="95"/>
+    <line x1="12" y1="50" x2="5" y2="50"/>
+    <line x1="88" y1="50" x2="95" y2="50"/>
+    <line x1="18" y1="18" x2="12" y2="12"/>
+    <line x1="82" y1="82" x2="88" y2="88"/>
+    <line x1="82" y1="18" x2="88" y2="12"/>
+    <line x1="18" y1="82" x2="12" y2="88"/>
     
-    <!-- Right hemisphere outline -->
-    <path d="M 178 100 Q 191 115 191 130 Q 191 165 171 185" 
-          stroke="#00ff88" stroke-width="2.5" fill="none"/>
+    <!-- Left bulb (smooth/logical) -->
+    <path d="M 50 15 Q 35 20 32 35 Q 30 45 32 55 Q 35 65 50 68" fill="none"/>
     
-    <!-- Top connection -->
-    <path d="M 100 70 Q 128 60 156 70" 
-          stroke="#00ffff" stroke-width="2" fill="none"/>
+    <!-- Right bulb (wrinkled/creative) -->
+    <path d="M 50 15 Q 65 20 68 35 M 68 35 Q 70 40 68 45 M 68 45 Q 70 50 68 55 M 68 55 Q 65 65 50 68" fill="none"/>
     
-    <!-- Left cerebral lobe details -->
-    <path d="M 75 105 Q 68 115 70 130" 
-          stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.7"/>
-    <path d="M 82 95 Q 75 108 78 125" 
-          stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <!-- Center dividing line -->
+    <line x1="50" y1="15" x2="50" y2="68"/>
     
-    <!-- Right cerebral lobe details -->
-    <path d="M 181 105 Q 188 115 186 130" 
-          stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.7"/>
-    <path d="M 174 95 Q 181 108 178 125" 
-          stroke="#ff00ff" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <!-- Bulb bottom curve -->
+    <path d="M 32 55 Q 30 60 35 65 L 65 65 Q 70 60 68 55" fill="none"/>
     
-    <!-- Corpus callosum center -->
-    <path d="M 110 120 Q 128 115 146 120" 
-          stroke="#00ffff" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <!-- Base connector -->
+    <path d="M 42 65 L 42 72" fill="none"/>
+    <path d="M 58 65 L 58 72" fill="none"/>
     
-    <!-- Brain stem -->
-    <path d="M 128 185 L 128 210" 
-          stroke="#00ff88" stroke-width="2" fill="none"/>
+    <!-- Screw base -->
+    <rect x="40" y="72" width="20" height="4" fill="none"/>
+    <line x1="40" y1="76" x2="60" y2="76" stroke="#00ff88" stroke-width="1"/>
+    <line x1="40" y1="78" x2="60" y2="78" stroke="#00ff88" stroke-width="1"/>
     
-    <!-- Center circle (neural core) -->
-    <circle cx="128" cy="128" r="18" 
-            stroke="#00ffff" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- Filament inside bulb -->
+    <path d="M 45 35 Q 47 40 50 38 Q 53 40 55 35" fill="none" stroke="#00ff88" stroke-width="0.8"/>
   </g>
 </svg>
