@@ -229,7 +229,7 @@ h2 {
 }
 
 .audience-section {
-    background: #f0faf8;
+    background: linear-gradient(135deg, #e6f4f1 0%, #d9f0ed 100%);
 }
 
 .audience-grid {
@@ -309,7 +309,7 @@ h2 {
 }
 
 .what-i-do {
-    background: linear-gradient(135deg, #ffffff 0%, #f9f8f6 100%);
+    background: #ffffff;
     border-top: 1px solid #e8e5df;
     border-bottom: 1px solid #e8e5df;
     position: relative;
@@ -355,7 +355,7 @@ h2 {
 }
 
 .use-cases {
-    background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%);
+    background: linear-gradient(135deg, #f9f8f6 0%, #f0ede9 100%);
     position: relative;
 }
 
@@ -431,7 +431,7 @@ h2 {
 }
 
 .local-section {
-    background: linear-gradient(135deg, #e6f4f1 0%, #d9f0ed 100%);
+    background: linear-gradient(135deg, #d4f0eb 0%, #c2ecf0 100%);
     border-top: 1px solid #2f7c6e20;
     position: relative;
 }
