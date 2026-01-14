@@ -5,7 +5,7 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copy project files to container
-COPY index.html styles.css favicon.svg ./
+COPY index.html styles.css favicon.svg form-handler.js ./
 
 # Expose port 8080 (required by Cloud Run)
 EXPOSE 8080

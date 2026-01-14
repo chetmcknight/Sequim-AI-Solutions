@@ -6,6 +6,7 @@
     <title>AI Solutions for Local Businesses | Sequim, WA</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="form-handler.js" defer></script>
 </head>
 <body>
     <header>
@@ -143,9 +144,40 @@
         <div class="container">
             <h2>Let's Talk</h2>
             <p>Not sure if AI is right for your situation? Let's find out together.</p>
-            <p>Book a free, no-pressure conversation. We'll talk about what you're working on, what's frustrating, and whether there's a practical way AI can help. If there is, I'll show you. If there isn't, I'll tell you that too.</p>
-            <a href="mailto:chetmcknight@gmail.com" class="cta-button">Schedule a Free Intro Call</a>
-            <p style="margin-top: 24px; font-size: 1rem; opacity: 0.9;">No sales pitch. Just an honest conversation about what might actually be useful.</p>
+            <p>Book a free, no-pressure conversation. We'll talk about what you're working on, what's frustrating, and whether there's a practical way AI can help.</p>
+            
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Smith" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(360) 555-0123">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label for="message">Tell Me About Your Project</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe your project, timeline, and any questions you have..." required></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="form-submit-button">
+                    <span>✉️</span> Send Message
+                </button>
+            </form>
+            
+            <p style="margin-top: 24px; font-size: 1rem; opacity: 0.9;">Or email directly: <a href="mailto:chetmcknight@gmail.com" style="color: #a78bfa; text-decoration: underline;">chetmcknight@gmail.com</a></p>
         </div>
     </section>
 
