@@ -21,6 +21,8 @@ steps:
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
+      - '--port'
+      - '8080'
 
 images:
   - 'gcr.io/$PROJECT_ID/sequim-ai-solutions:$COMMIT_SHA'
