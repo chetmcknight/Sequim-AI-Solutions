@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.innerHTML = '<span>⏳</span> Sending...';
 
         try {
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbyfJwewS_gaBjUeGIDhHbhZHQXLKsnN4idH9vgb9w7kBDirp-j6HcDs4DWDfxLkRDcR/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxHCneQpP6aNeR8Rs7A6Ys1nicVDi_kXGDdtpgeBAJcUQeGS9SpVIAvo18DMfl6nG-C/exec';
             
             // Use FormData for better compatibility with Google Apps Script
             const formDataToSend = new URLSearchParams();
