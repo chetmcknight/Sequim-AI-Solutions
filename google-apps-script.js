@@ -33,6 +33,9 @@ function doPost(e) {
       params.phone,
       params.message
     ]);
+
+    // Notify immediately
+    sendNotification(params);
     
     // Return success response
     return ContentService
@@ -50,17 +53,30 @@ function doPost(e) {
 // Test function (optional - for debugging)
 function testPost() {
   const testData = {
-    postData: {
-      contents: JSON.stringify({
-        name: 'Test User',
-        email: 'test@example.com',
-        phone: '555-0123',
-        message: 'This is a test message',
-        timestamp: new Date().toISOString()
-      })
+    parameter: {
+      name: 'Test User',
+      email: 'test@example.com',
+      phone: '555-0123',
+      message: 'This is a test message',
+      timestamp: new Date().toISOString()
     }
   };
   
   const result = doPost(testData);
   Logger.log(result.getContent());
+}
+
+function sendNotification(params) {
+  const message =
+    `📬 New form submission\n\n` +
+    `Name: ${params.name}\n` +
+    `Email: ${params.email}\n` +
+    `Phone: ${params.phone}\n` +
+    `Message: ${params.message}`;
+
+  MailApp.sendEmail(
+    "chetmcknight@gmail.com",
+    "New Website Form Submission",
+    message
+  );
 }
